@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARAT</title>
+    <link rel="stylesheet" href="2. home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Passion+One:wght@400;700;900&family=Righteous&family=Satisfy&family=Spicy+Rice&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fcb8daa1d8.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<body>
+    <header>
+    <h1><strong>CARAT</strong></h1>
+    <nav class="nav">
+    <ul class="nav-links">
+        <li class="nav-link">
+            <a href="#product" class="link">PRODUCTS</a>
+        </li>
+        <li class="nav-link">
+            <a href="#latest" class="link">PROMO</a>
+        </li>
+        <li class="nav-link">
+            <a href="#about-us" class="link">ABOUT US</a>
+        </li>
+        <li class="nav-link">
+            <a href="#review" class="link">REVIEW</a>
+        </li>
+        <li class="nav-link">
+            <a href="#contact" class="link">CONTACT US</a>
+        </li>
+    </ul>
+    </nav>
+
+    <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    </header>
+    <script>
+        const navE1 = document.querySelector('.nav');
+        const hamburgerE1 = document.querySelector('.hamburger');
+
+        hamburgerE1.addEventListener("click", () => {
+            navE1.classList.toggle("nav--open");
+        });
+    </script>
+    <main>
+        <section class="home">
+            <video class="video-slide active" src="BACKGROUND/B1.webm" autoplay muted loop></video>
+            <video class="video-slide" src="BACKGROUND/B2.webm" autoplay muted loop></video>
+            <video class="video-slide" src="BACKGROUND/B3.webm" autoplay muted loop></video>
+            
+            <div class="content active">
+                <h2><strong>TIME SAVER</strong></h2>
+                <p>TOO BUSY TO SHOP FOR STUDY NEEDS ? BROWSING OUR SHOP WOULDN'T TAKE MUCH TIME !</p>
+                <h4><strong>JUST ORDER IT AND WE WILL DELIVER TO YOUR HOME !</strong></h4>
+                <a href="3. product.html">SHOP</a>
+            </div>
+        
+            <div class="content">
+                <h2><strong>ON A BUDGET ?</strong></h2>
+                <p>OH NO WORRIES FOR THAT! OUR PRODUCTS IS AFFORDABLE FOR YOU GUYS!</p>
+                <h4><strong>WHY NOT CHECK IT OUT NOW ?</strong></h4>
+                <a href="3. product.html">SHOP</a>
+            </div>
+        
+            <div class="content">
+                <h2><strong>EMERGENCY ?</strong></h2>
+                <p>GOTTA USE IT BY TOMORROW? TWO DAYS LATER? OUR FAST DELIVERY WILL BE SURE TO MAKE IT ON TIME!</p>
+                <h4><strong>HURRY UP! CHECK OUT OUR STORE!</strong></h4>
+                <a href="3. product.html">SHOP</a>
+            </div>
+        
+            <div class="slider-navigation">
+                <div class="nav-btn active"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+            </div>
+    </section>
+    
+    <script type="text/javascript">
+            
+    //Javascript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+    
+    var sliderNav = function(manual){
+        btns.forEach((btn) => {
+           btn.classList.remove("active"); 
+        }); 
+
+        slides.forEach((slide) => {
+           slide.classList.remove("active"); 
+        });
+    
+        contents.forEach((content) => {
+           content.classList.remove("active"); 
+        });
+    
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+    }
+    
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            sliderNav(i);
+        });
+    });
+    </script>
+
+    <section class="content-body">
+        <section id="product">
+        <section class="product-header">
+                <h3>Products</h3>
+            </div>
+
+            <section class="grid-product">
+                <div class="product-grid-box product-grid-box1">
+                    <img src="BACKGROUND/list1.jpg">
+                    <div class="product-grid-text">
+                        <strong>STATIONERY</strong>
+                        <span>Can't do anything without it!</span>
+                    </div>
+                </div>
+
+                <div class="product-grid-box product-grid-box2">
+                    <img src="BACKGROUND/list2.jpg">
+                    <div class="product-grid-text">
+                        <strong>TEXTBOOK</strong>
+                        <span>The one you got is too old? Buy a new one!</span>
+                    </div>
+                </div>
+
+                <div class="product-grid-box product-grid-box3">
+                    <img src="BACKGROUND/list3.jpg">
+                    <div class="product-grid-text">
+                        <div class="product-grid-text3">
+                            <strong>WORKBOOK</strong>
+                            <span>Want to do more exercise? Check it out here!</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="BUTON">
+                <form action="3. product.html">
+                    <button>INTERESTED? COME AND SHOP NOW!</button>
+                </form>
+            </div>
+            <div class="blank1"></div>
+        </section>
+
+        <section id="latest">
+            <div class="blank1"></div>
+            <div class="new-p-heading">
+                <h3>Products on PROMO !</h3>
+                <ul>
+                    <li class="active" data-filter="all">All</li>
+                    <li data-filter="s">Stationery</li>
+                    <li data-filter="t">Textbook</li>
+                    <li data-filter="w">Workbook</li>
+                </ul>
+            </div>
+
+            <div class="latest-product-container">
+                
+                <div class="latest-product-box s">
+                    <a href="#" class="latest-product-img">
+                        <img src="STATIONERY/2 PEN + 10 REFILLS (BLACK).png" alt="">
+                    </a>
+                    <div class="latest-product-text">
+                        <a href="#" class="latest-product-title">2 PEN + 10 REFILLS (BLACK)</a>
+                        <span>RM2.00</span>
+                    </div>
+                </div>
+                
+                <div class="latest-product-box s">
+                    <a href="#" class="latest-product-img">
+                        <img src="STATIONERY/12 PCS MORANDI COLOR HIGHLIGHTER 7.59.png" alt="">
+                    </a>
+                    <div class="latest-product-text">
+                        <a href="#" class="latest-product-title">12 PCS MORANDI COLOR HIGHLIGHTER</a>
+                        <span>RM7.59</span>
+                    </div>
+                </div>
+
+                <div class="latest-product-box s">
+                    <a href="#" class="latest-product-img">
+                        <img src="STATIONERY/WATERCOLOR MARKERS (48 COLORS).png" alt="">
+                    </a>
+                    <div class="latest-product-text">
+                        <a href="#" class="latest-product-title">WATERCOLOR MARKERS (48 COLORS)</a>
+                        <span>RM22.90</span>
+                    </div>
+                </div>
+
+                <div class="latest-product-box t">
+                    <a href="#" class="latest-product-img">
+                        <img src="TEXTBOOK/T1 DESTINASI IMPIAN.png" alt="">
+                    </a>
+                    <div class="latest-product-text">
+                        <a href="#" class="latest-product-title">T1 DESTINASI IMPIAN</a>
+                        <span>RM5.30</span>
+                    </div>
+                </div>
+
+                <div class="latest-product-box t">
+                    <a href="#" class="latest-product-img">
+                        <img src="TEXTBOOK/T4 LEFTENAN ADNAN.png" alt="">
+                    </a>
+                    <div class="latest-product-text">
+                        <a href="#" class="latest-product-title">T4 LEFTENAN ADNAN</a>
+                        <span>RM18.90</span>
+                    </div>
+                </div>
+
+                <div class="latest-product-box w">
+                    <a href="#" class="latest-product-img">
+                        <img src="WB/UASA ENGLISH ESSAY WRITING (7.21).png" alt="">
+                    </a>
+                    <div class="latest-product-text">
+                        <a href="#" class="latest-product-title">UASA ENGLISH ESSAY WRITING</a>
+                        <span>RM7.21</span>
+                    </div>
+                </div>
+
+                <div class="latest-product-box w">
+                    <a href="#" class="latest-product-img">
+                        <img src="WB/KOLEKSI PENTAKSIRAN SAINS TINGKATAN 2 (3.16).png" alt="">
+                    </a>
+                    <div class="latest-product-text">
+                        <a href="#" class="latest-product-title">KOLEKSI PENTAKSIRAN SAINS TINGKATAN 2</a>
+                        <span>RM3.16</span>
+                    </div>
+                </div>
+
+                <div class="latest-product-box w">
+                    <a href="#" class="latest-product-img">
+                        <img src="WB/UASA LATIHAN PENULISAN 14.30.png" alt="">
+                    </a>
+                    <div class="latest-product-text">
+                        <a href="#" class="latest-product-title">UASA LATIHAN PENULISAN</a>
+                        <span>RM14.30</span>
+                    </div>
+                </div>
+
+                <div class="latest-product-box w">
+                    <a href="#" class="latest-product-img">
+                        <img src="WB/UASA LATIHAN TATABAHASA 14.30.png" alt="">
+                    </a>
+                    <div class="latest-product-text">
+                        <a href="#" class="latest-product-title">UASA LATIHAN TATABAHASA</a>
+                        <span>RM14.30</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="jquery-3.7.1 (1).js"></script>
+
+        <script>
+            var selector = '.new-p-heading li';
+
+            $(selector).on('click',function(){
+                $(selector).removeClass('active')
+                $(this).addClass('active')
+            });
+
+            $(document).ready(function(){
+                $('.new-p-heading li').click(function(){
+                    const value = $(this).attr('data-filter');
+                    if(value == 'all'){
+                        $('.latest-product-box').show('1000');
+                    }
+                    else{
+                        $('.latest-product-box').not('.'+value).hide('1000');
+                        $('.latest-product-box').filter('.'+value).show('1000');
+                    }
+                });
+            });
+        </script>
+
+            <section class="about-us" id="about-us">
+
+            <div class="intro">
+                <h2><strong>WHY CHOOSE CARAT?</strong></h2>
+                <p>CARAT is the unit of DIAMONDS!<br>We believe that all the students have potential in them to <strong>SHINE BRIGHTLY IN THE FUTURE LIKE A DIAMOND</strong>! Our objective is to provide high quality products to all students to make sure that they can study well by using our product.</p>
+            </div>
+            <img src="BACKGROUND/BONGBONGIE.png" alt="BONGBONGIE">
+            </section>
+
+            <section id="review">
+
+                <div class="comments">
+                    <h2>Our customers say..</h2>
+                </div>
+
+                <div class="review-box-container">
+                    <div class="review-box">
+                        <div class="box-top">
+                            <div class="profile">
+                                <div class="profile-img">
+                                    <img src="BACKGROUND/P2.jpg" alt="">
+                                </div>
+                                <div class="user-name">
+                                    <strong>JUNNIE</strong>
+                                    <span>@ocljun0610</span>
+                                </div>
+                            </div>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            <p>The textbook that I got is so old that I can't even fix it! Happy to got them here!</p>
+                        </div>
+                    </div>
+
+                    <div class="review-box">
+                        <div class="box-top">
+                            <div class="profile">
+                                <div class="profile-img">
+                                    <img src="BACKGROUND/P4.jpg" alt="">
+                                </div>
+                                <div class="user-name">
+                                    <strong>PATOTIE</strong>
+                                    <span>@universe.factory</span>
+                                </div>
+                            </div>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            <p>OMG IT WAS MY LIFE SAVER! I ALMOST HAVE NO PEN FOR MY EXAMS!</p>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="box-top">
+                            <div class="profile">
+                                <div class="profile-img">
+                                    <img src="BACKGROUND/P3.jpg" alt="">
+                                </div>
+                                <div class="user-name">
+                                    <strong>JOSHUA</strong>
+                                    <span>@jisoohonggg</span>
+                                </div>
+                            </div>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            <p>Fast delivery! The product arrived in good position, happy with it!</p>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <div class="box-top">
+                            <div class="profile">
+                                <div class="profile-img">
+                                    <img src="BACKGROUND/P1.jpg" alt="">
+                                </div>
+                                <div class="user-name">
+                                    <strong>COUPS</strong>
+                                    <span>@misshanni</span>
+                                </div>
+                            </div>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            <p>Wow, it save a lot of time! I can just do all my works at home while waiting for my package!</p>
+                        </div>
+                    </div>
+                
+                </div>
+            </section>
+    </section>
+
+            <div class="contact" id="contact" >
+                <div class="contact-info ">
+                <h3>GET IN TOUCH</h3> 
+                <p>We care about our customers<br>you can contact us for any feedback</p>
+                </div>
+
+                <div class="contact-info" >
+                    <h3>OPENING HOURS</h3>
+                        <p>Mon - Sat 7am - 9pm:</p>
+                        <p>Opening all hours</p>
+                        <br>
+                        <div class="info">
+                        <h4>CONTACT INFO</h4>
+                        <p><i class='bx bx-phone'></i>763-957-6781</p>
+                        <p><i class='bx bxl-whatsapp'></i>706-734-2591</p>   
+                </div>
+            </div>
+
+    </main>
+    <footer>
+        <p>COPYRIGHT 2024 CARATS HEAVEN All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
